@@ -1,6 +1,6 @@
 import type { SystemMessage } from '@xsai/shared-chat'
 
-import { EMOTION_EmotionMotionName_value, EMOTION_VALUES } from '../emotions'
+import { EMOTION_SituationHint_value, EMOTION_VALUES } from '../emotions'
 
 function message(prefix: string, suffix: string) {
   return {
@@ -8,7 +8,7 @@ function message(prefix: string, suffix: string) {
     content: [
       prefix,
       EMOTION_VALUES
-        .map(emotion => `- ${emotion} (Emotion for feeling ${EMOTION_EmotionMotionName_value[emotion]})`)
+        .map(emotion => `- ${emotion}: ${EMOTION_SituationHint_value[emotion]}`)
         .join('\n'),
       suffix,
     ].join('\n\n'),

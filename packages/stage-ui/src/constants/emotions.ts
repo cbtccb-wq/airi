@@ -46,6 +46,19 @@ export const EMOTION_VRMExpressionName_value = {
   [Emotion.Curious]: 'think',
 } satisfies Record<Emotion, string | undefined>
 
+// Human-readable situation hints used in the LLM system prompt to guide emotion selection.
+export const EMOTION_SituationHint_value: Record<Emotion, string> = {
+  [Emotion.Happy]: 'joyful, excited, cheerful — when something pleases, delights, or goes well',
+  [Emotion.Sad]: 'sorrowful, melancholic, disappointed — when something is upsetting or touching',
+  [Emotion.Angry]: 'frustrated, irritated, furious — when something feels unfair or annoying',
+  [Emotion.Think]: 'pondering, reflecting, processing — when reasoning or carefully considering something',
+  [Emotion.Surprise]: 'astonished, startled, shocked — when something unexpected happens',
+  [Emotion.Awkward]: 'embarrassed, flustered, shy — when in an uncomfortable or embarrassing situation',
+  [Emotion.Question]: 'inquiring, uncertain, wondering — when asking or unsure about something',
+  [Emotion.Neutral]: 'calm, composed, resting — default state with no strong feeling',
+  [Emotion.Curious]: 'intrigued, interested, inquisitive — when eager to learn or explore something',
+}
+
 export interface EmotionPayload {
   name: Emotion
   intensity: number
